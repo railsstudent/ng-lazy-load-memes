@@ -26,5 +26,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+Based on the Codepen solution, https://codepen.io/joeflash/pen/XYgyvW;  create an Angular version of lazy loading animal memes using IntersectionObserver API.
 
-Based on the codepen solution, https://codepen.io/joeflash/pen/XYgyvW,  write an Angular version of lazy loading memes using IntersectionObserver API.
+## Deploy to github.io
+
+* ng build --prod --base-href "/ng-lazy-load-memes/"
+* ngh --no-silent --dir dist/ng-lazy-load-memes
+
+* Method 2
+  * npm run deploy
+  * yarn deploy
+
+## Github.io URL
+
+https://railsstudent.github.io/ng-lazy-load-memes/
