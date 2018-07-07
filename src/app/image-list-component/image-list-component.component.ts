@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, QueryList, ViewChildren, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, QueryList, ViewChildren, ElementRef, Renderer2 } from '@angular/core';
 import { WindowRef } from '../WindowRef';
 import { fetchImage, lazyLoadImage } from './util';
 
@@ -20,10 +20,10 @@ export class ImageListComponentComponent implements OnInit, AfterViewInit {
   @ViewChildren('image')
   images: QueryList<ElementRef>;
 
-  constructor(private winRef: WindowRef) { }
+  constructor(private winRef: WindowRef, private renderer: Renderer2) {}
 
   ngOnInit() {
-    this.observer = new IntersectionObserver(this.observerCallback, option);
+    this.observer = new IntersectionObserver(this.observerCallback.bind(this), option);
   }
 
   ngAfterViewInit() {
@@ -39,11 +39,20 @@ export class ImageListComponentComponent implements OnInit, AfterViewInit {
   }
 
   observerCallback(entries: IntersectionObserverEntry[], observer) {
-    console.log(entries);
     entries.forEach((entry) => {
-      const img = entry.target;
-      // const ratio = entry.intersectionRatio;
-      console.log(img, img.id, entry.intersectionRatio);
+      const img = entry.target as HTMLImageElement;
+      if (entry.intersectionRatio > 0) {
+        this.renderer.removeClass(img, 'invisible');
+      } else {
+        this.renderer.addClass(img, 'invisible');
+      }
+      if (entry.intersectionRatio > 0.25) {
+        if (img.dataset.src) {
+          lazyLoadImage(img)
+            .then(() => delete img.dataset.src)
+            .catch((err) => console.error(err));
+        }
+      }
     });
   }
 }

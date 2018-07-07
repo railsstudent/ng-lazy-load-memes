@@ -1,4 +1,4 @@
-export const fetchImage = (url) => {
+export const fetchImage = (url: string) => {
   return new Promise((resolve, reject) => {
     if (!url) {
       return;
@@ -11,9 +11,7 @@ export const fetchImage = (url) => {
   });
 };
 
-export const lazyLoadImage = (img) => {
+export const lazyLoadImage = (img: HTMLImageElement) => {
   return fetchImage(img.dataset.src)
-    .then((url) => {
-      img.src = url;
-    });
+    .then((url: string) => img.src = url);
 };
