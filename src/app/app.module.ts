@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ImageListComponentComponent } from './image-list-component/image-list-component.component';
-import { WindowRef } from './WinRef';
+import { WindowRef } from './WindowRef';
 
 @NgModule({
   declarations: [
