@@ -10,4 +10,13 @@
   }
 }
 
+.navbar {
+  &.is-link {
+    background: rebeccapurple;
+  }
+
+  .navbar-brand {
+    margin: 0 auto;
+  }
+}
 
