@@ -10,7 +10,6 @@
   <div class="container">
     <div class="images">
       <div class="box image is-5by4" *ngFor="let url of urls; let id = index;">
-        <p>{{url.placeholder}}, {{url.actual}}</p>
         <img id="i{{id}}" [src]="url.placeholder" [attr.data-src]="url.actual"  alt="" #image>
       </div>
 

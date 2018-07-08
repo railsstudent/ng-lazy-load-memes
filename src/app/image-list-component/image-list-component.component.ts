@@ -17,48 +17,52 @@ export class ImageListComponentComponent implements OnInit, AfterViewInit {
 
   observer: any;
   urls = [
-    { placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593811/15_eegbn0.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_533/v1526593811/15_eegbn0.webp'
+    { placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-01-720x539.jpg'
     },
-    { placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593811/14_alibgk.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_655/v1526593811/14_alibgk.webp'
+    { placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-02-720x932.jpg'
     },
-    { placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593811/13_w6cduy.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_532/v1526593811/13_w6cduy.webp'
+    { placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-03-720x697.jpg'
     },
-    { placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593810/11_sx2cpl.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_538/v1526593810/11_sx2cpl.webp'
+    { placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-04-720x540.jpg'
     },
-    { placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593810/10_glcemk.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_650/v1526593810/10_glcemk.webp'
-    },
-    {
-      placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593810/08_kzi8xe.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_691/v1526593810/08_kzi8xe.webp'
+    { placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-05-720x530.jpg'
     },
     {
-      placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593810/07_loq0b4.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_703/v1526593810/07_loq0b4.webp'
+      placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-06-720x504.jpg'
     },
     {
-      placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593809/05_t7l66e.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_613/v1526593809/05_t7l66e.webp'
+      placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-07-720x950.jpg'
     },
     {
-      placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593809/04_t9shus.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_535/v1526593809/04_t9shus.webp'
+      placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-08-720x519.jpg'
     },
     {
-      placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593809/03_fsaymj.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_715/v1526593809/03_fsaymj.webp'
+      placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-09-720x662.jpg'
     },
     {
-      placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593809/02_walsxe.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_649/v1526593809/02_walsxe.webp'
+      placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-10-720x885.jpg'
     },
     {
-      placeholder: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_10/v1526593809/01_r77clg.webp',
-      actual: 'https://res.cloudinary.com/chuloo/image/upload/c_scale,w_653/v1526593809/01_r77clg.webp'
+      placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-11-720x540.jpg'
+    },
+    {
+      placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-12-720x463.jpg'
+    },
+    {
+      placeholder: 'https://via.placeholder.com/600x480',
+      actual: 'https://winkgo.com/wp-content/uploads/2018/05/55-Funniest-Cat-Memes-Ever-17-720x520.jpg'
     }
   ];
 
@@ -85,7 +89,6 @@ export class ImageListComponentComponent implements OnInit, AfterViewInit {
 
   observerCallback(entries: IntersectionObserverEntry[], observer) {
     entries.forEach((entry) => {
-      console.log('callback fired');
       const img = entry.target as HTMLImageElement;
       if (entry.intersectionRatio > 0) {
         this.renderer.removeClass(img, 'invisible');
