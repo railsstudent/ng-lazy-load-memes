@@ -9,10 +9,11 @@
 <div class="section">
   <div class="container">
     <div class="images">
-      <div class="box image is-5by4" *ngFor="let url of urls; let id = index;">
-        <img id="i{{id}}" [src]="url.placeholder" [attr.data-src]="url.actual"  alt="" #image>
+      <div class="image-container" *ngFor="let url of urls; let id = index;">
+        <p class="image-title">{{id + 1}})</p>
+        <div class="box image is-5by4">
+          <img id="i{{id}}" [src]="url.placeholder" [attr.data-src]="url.actual"  alt="" #image>
       </div>
-
     </div>
   </div>
 </div>

@@ -1,18 +1,38 @@
-.container {
-  width: 50%;
+:host {
+  --width: 70%;  
+  --theme: rebeccapurple;
+  --frame-color: #571821;
+  --frame-width: 0.75rem;  
+  --frame-radius: 10px;
+}
 
-  .image {
-    margin: 100px auto;
+.container {
+  width: var(--width);
+
+  .image { 
+    &-container {
+      margin: 30px auto;
+    }
+
+    &-title {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
   }
 
   .invisible {
     visibility: hidden;
   }
+
+  .image {
+    border: var(--frame-width) solid var(--frame-color);
+    border-radius: var(--frame-radius);
+  }
 }
 
 .navbar {
   &.is-link {
-    background: rebeccapurple;
+    background: var(--theme);
   }
 
   .navbar-brand {
@@ -20,3 +40,8 @@
   }
 }
 
+@media only screen and (max-width: 800px) {
+  :host {
+    --theme: goldenrod;
+  }
+}

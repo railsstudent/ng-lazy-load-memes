@@ -5,7 +5,8 @@ import {
   QueryList,
   ViewChildren,
   ElementRef,
-  Renderer2
+  Renderer2,
+  OnDestroy
 } from '@angular/core';
 import { WindowRef } from '../WindowRef';
 import {
@@ -20,7 +21,7 @@ import {
   templateUrl: './image-list-component.component.html',
   styleUrls: ['./image-list-component.component.scss']
 })
-export class ImageListComponentComponent implements OnInit, AfterViewInit {
+export class ImageListComponentComponent implements OnInit, AfterViewInit, OnDestroy {
 
   observer: IntersectionObserver;
   urls = MEMES;
@@ -44,6 +45,11 @@ export class ImageListComponentComponent implements OnInit, AfterViewInit {
         this.observer.observe(image);
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    // remove all the observers of images
+    this.observer.disconnect();
   }
 
   observerCallback(entries: IntersectionObserverEntry[], observer: IntersectionObserver) {
