@@ -11,10 +11,8 @@ export const fetchImage = (url: string) => {
   });
 };
 
-export const lazyLoadImage = (img: HTMLImageElement) => {
-  return fetchImage(img.dataset.src)
-    .then((url: string) => img.src = url);
-};
+export const lazyLoadImage = (img: HTMLImageElement) => 
+  fetchImage(img.dataset.src).then((url: string) => img.src = url);
 
 export const option = {
   root: null,
