@@ -1,19 +1,18 @@
 <!-- header -->
 <nav class="navbar is-link is-fixed-top">
   <div class="navbar-brand">
-    <h1 class="navbar-item is-size-3">Animal Memes (Scotch Code Challenge #10)</h1>
+    <h1 class="navbar-item is-size-3">Cat Memes (Scotch Code Challenge #10)</h1>
   </div>
 </nav>
 
 <!-- the actual content -->
-<div class="section">
+<section>
   <div class="container">
-    <div class="images">
       <div class="image-container" *ngFor="let url of urls; let id = index;">
         <p class="image-title">{{id + 1}})</p>
         <div class="box image is-5by4">
           <img id="i{{id}}" [src]="url.placeholder" [attr.data-src]="url.actual"  alt="" #image>
+        </div>
       </div>
-    </div>
   </div>
-</div>
+</section>
