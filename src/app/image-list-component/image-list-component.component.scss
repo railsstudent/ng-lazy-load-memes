@@ -6,12 +6,17 @@
   --frame-radius: 10px;
 }
 
+section {
+  margin-top: 70px;
+}
+
 .container {
   width: var(--width);
 
   .image {
     &-container {
-      margin: 30px auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
 
     &-title {
