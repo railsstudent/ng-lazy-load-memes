@@ -10,7 +10,6 @@ import {
 } from '@angular/core';
 import { WindowRef } from '../WindowRef';
 import {
-  fetchImage,
   lazyLoadImage,
   option,
   MEMES
