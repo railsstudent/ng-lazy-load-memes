@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'app';
 
   constructor(titleService: Title) {
-    titleService.setTitle('Lazy Loading Memes');
+    titleService.setTitle('Cat Memes');
   }
 }
